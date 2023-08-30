@@ -1,6 +1,7 @@
 # wait for somthing happens
 # then do something
 import random
+import time
 
 
 colors = ['red', 'green', 'blue']
@@ -16,7 +17,8 @@ numberWrong = 0
 
 while gameover == False:
     # get user input
-    print('______________________________')
+    print('______________________________\n\n')
+    
     print('You have guessed ' + str(numberRight) + ' right and ' + str(numberWrong) + ' wrong.')
     userinput = input('Enter a color (RGB) or "exit" to quit : ')
     if userinput.lower() == 'exit':
@@ -43,3 +45,5 @@ while gameover == False:
             numberWrong += 1
     else:
         print('That is not a valid colour, try again.')
+        
+    time.sleep(2)
